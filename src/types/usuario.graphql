@@ -1,0 +1,50 @@
+type AuthResponse {
+    token:  String!
+    errors: [Error!]
+}
+
+type Usuario {
+    id_usuario:         ID!
+    email:              String!
+    imagen:             String
+    fecha_registro:     String!
+    dni:                String!
+    nombre:             String!
+    apellido:           String!
+    sexo:               String
+    fecha_nacimiento:   String
+    pais:               String
+    departamento:       String
+    provincia:          String
+    distrito:           String
+    direccion:          String
+    telefono_fijo:      String
+    telefono_celular:   String
+
+    rol:                Rol
+    estado_civil:       EstadoCivil
+}
+
+type Mutation {
+    login (
+        email:      String!
+        password:   String!
+    ): AuthResponse!
+    register (
+        nombre:     String!
+        apellido:   String!
+        email:      String!
+        password:   String!
+        dni:        String!
+    ): AuthResponse!
+    recover (
+        email:      String!
+    ): Boolean! 
+    confirmAccountFromLink (
+        token:      String!
+    ): Boolean!
+    resetPassword (
+        token:      String!
+        password:   String!
+    ): Errors!
+}

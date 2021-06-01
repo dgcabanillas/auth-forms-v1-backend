@@ -1,0 +1,12 @@
+type Rol {
+    id_rol: String
+}
+
+type Roles {
+    roles:  [Rol!]
+    errors: [Error!]
+}
+
+type Query {
+    getRoles: Roles!
+}

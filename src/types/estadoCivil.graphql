@@ -1,0 +1,12 @@
+type EstadoCivil {
+    id_estado_civil: String
+}
+
+type EstadosCivil {
+    estadosCivil:   [EstadoCivil!]
+    errors:         [Error!]
+}
+
+type Query {
+    getEstadosCivil: EstadosCivil!
+}
