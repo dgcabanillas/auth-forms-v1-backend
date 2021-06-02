@@ -11,7 +11,7 @@ export const sendResetPasswordEmail = async ( args ) => {
         const link = config.env.CLIENT_URL + '/auth/reset-password/' + token;
         
         let mailOptions = {
-            from:       "admin <no-reply@gmail.com>", 
+            from:       "admin <sistegagestion.v001@gmail.com>", 
             to:         email,
             subject:    'Recuperar cuenta',
             html:       resetPassword({ nombre, apellido, link })

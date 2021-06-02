@@ -11,7 +11,7 @@ export const sendWelcomeEmail = async ( args ) => {
         const link = config.env.CLIENT_URL + '/auth/confirm-account/' + token;
         
         let mailOptions = {
-            from:       "admin <no-reply@gmail.com>", 
+            from:       "admin <sistegagestion.v001@gmail.com>", 
             to:         email,
             subject:    '¡Bienvenido!',
             html:       welcome({ nombre, apellido, link })
